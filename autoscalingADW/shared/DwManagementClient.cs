@@ -70,7 +70,7 @@ namespace autoscalingADW.shared
         /// or two for completion. It is upto the caller to ensure to add wait in their code. There 
         /// is no programmatic way to query DWH status as of now. 
         /// </summary>
-        public void Pause()
+        public HttpResponseMessage Pause()
         {
             string pauseRestEndPoint = $"{restEndPointUrl}/pause?{apiVersion}";
             HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, pauseRestEndPoint);
@@ -81,6 +81,8 @@ namespace autoscalingADW.shared
                 throw new WebException($"Pause Database operation failed with response from server {response.StatusCode}: {response.ReasonPhrase}");
 
             string content = response.Content.ReadAsStringAsync().Result;
+
+            return response;
         }
 
         /// <summary>
@@ -92,7 +94,7 @@ namespace autoscalingADW.shared
         /// minutes for completion. It is upto the caller to ensure to add wait in their code. There 
         /// is no programmatic way to query DWH status as of now. 
         /// </summary>
-        public void Resume()
+        public HttpResponseMessage Resume()
         {
             string resumeRestEndPoint = $"{restEndPointUrl}/resume?{apiVersion}";
             HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, resumeRestEndPoint);
@@ -103,6 +105,8 @@ namespace autoscalingADW.shared
                 throw new WebException($"Resume Database operation failed with response from server {response.StatusCode}: {response.ReasonPhrase}");
 
             string content = response.Content.ReadAsStringAsync().Result;
+
+            return response;
         }
 
         /// <summary>
