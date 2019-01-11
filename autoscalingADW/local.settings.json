@@ -1,0 +1,18 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "AzureWebJobsDashboard": "",
+    "SqlServerName": "seyonadwserver.database.windows.net",
+    "SqlDwName": "seyonadw",
+    "SqlDwLocation": "West US 2",
+    "DwuConfigFile": "C:\\functions\\adwautomation-master\\adwautomation-master\\autoscalingADW\\dwuconfigs.json",
+    "SubscriptionId": "5cf1d202-629b-4338-b61b-ef1f068bb89a",
+    "TenantId": "521ae675-49d9-4e53-9cfc-fd592a4d36c6",
+    "ClientId": "4914d7f8-3dd6-4513-a9fe-0c93dc85abf9",
+    "ClientKey": "Password@123",
+    "ResourceId": "/subscriptions/5cf1d202-629b-4338-b61b-ef1f068bb89a/resourceGroups/seyonadfactory/providers/Microsoft.Sql/servers/seyonadwserver/databases/seyonadw"
+  }
+  
+}
