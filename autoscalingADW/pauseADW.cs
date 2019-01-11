@@ -18,7 +18,7 @@ namespace autoscalingADW
     {
         [FunctionName("pauseADW")]
         public static async Task<HttpResponseMessage> pause(
-            [HttpTrigger(AuthorizationLevel.Function, "get",  Route = "pauseADW")] HttpRequestMessage req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get",  Route = "pauseADW")] HttpRequestMessage req,
             ILogger log, ExecutionContext context)
         {
             log.LogInformation("pause the resumed ADW");
