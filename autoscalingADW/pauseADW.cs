@@ -36,9 +36,9 @@ namespace autoscalingADW
                 //var tableName = config["DwScaleLogsTable"];
                 var dwuConfigFile = config["DwuConfigFile"];
                 var resourceId = config["ResourceId"];
-                string startupPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
-                string dwuConfigFilePath = startupPath + "\\" + dwuConfigFile;
-                var dwuConfigManager = new DwuConfigManager(dwuConfigFilePath);
+                //string startupPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
+                //string dwuConfigFilePath = startupPath + "\\" + dwuConfigFile;
+                //var dwuConfigManager = new DwuConfigManager(dwuConfigFilePath);
 
                 // Create a DataWarehouseManagementClient
                 var dwClient = DwClientFactory.Create(resourceId.ToString(), context);
