@@ -17,7 +17,7 @@ namespace autoscalingADW
     {
         [FunctionName("scaleup")]
         public static async Task<IActionResult> getadwinformation(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "getadwinformation")] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "getadwinformation")] HttpRequest req,
             ILogger log, ExecutionContext context)
         {
             log.LogInformation("autoscaleup of adw initiated");

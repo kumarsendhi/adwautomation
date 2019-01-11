@@ -19,7 +19,7 @@ namespace autoscalingADW
         
         [FunctionName("resumeADW")]
         public static async Task<HttpResponseMessage> resume(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "resumeADW")] HttpRequestMessage req,
+            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "resumeADW")] HttpRequestMessage req,
             ILogger log, ExecutionContext context)
         {
             
